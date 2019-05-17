@@ -27,11 +27,11 @@ void loop() {
   float temperatura = barramento.getTempC(sensor);
   int boia2_estado = digitalRead(boia2Pin);
   int boia1_estado = digitalRead(boia1Pin);
-  if  (boia1_estado == LOW){ 
-    digitalWrite(soneloidePin,HIGH); 
+  if  (boia1_estado == HIGH){ 
+    digitalWrite(soneloidePin,LOW); 
   }else{
-    if (boia2_estado == HIGH) {
-      digitalWrite(soneloidePin,LOW);
+    if (boia2_estado == LOW) {
+      digitalWrite(soneloidePin,HIGH);
     }
   }
   lcd.setCursor (2,0);
